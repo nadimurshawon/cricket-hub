@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- Logo on the left -->
+            <a class="navbar-brand" href="#">CricketHub</a>
+            
+            <!-- Navbar toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Right side navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ranking</a>
+                    </li>
+                    <!-- User Account Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link user-account" href="#" data-bs-toggle="modal" data-bs-target="#authModal">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" alt="User Account" width="30" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page Content Section -->
+    <div class="container mt-5" id="home">
+        <center><h2>Welcome to CricketHub</h2></center>
+        <center><p>Stay updated with Live cricket scores, Schedules, News.</p></center>
+        
+        <!-- Cricket News Section -->
+        <h3>Latest Cricket News</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="lition das.jpeg" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Bangladesh batsman Litton Kumer Das will lead the Tigers in T-20I</h5>
+                        <p class="card-text">The 31-year-old right-hander, who has scored 1835 runs in 93 T-20s for Bangladesh since making his debut in 2015 against the same opponents, has been entrusted with the role after incumbent captain Tamim Iqbal was forced to withdraw from the squad due to a groin injury.  </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="ab.jpeg" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">AB De Villiers Turns Back The Clock, Slams 28-Ball Ton With 15 Sixes - Watch</h5>
+                        <p class="card-text">AB De Villiers Turns Back The Clock, Slams 28-Ball Ton With 15 Sixes - WatchLegendary South Africa cricket team batter AB De Villiers turned back the clock as he slammed an unbeaten century off just 28 deliveries.NDTV Sports DeskUpdated: March 11, 2025 09:48 pm ISTRead Time: 4 min
+
+                            AB De Villiers Turns Back The Clock, Slams 28-Ball Ton With 15 Sixes - Watch
+                            AB De Villiers in action© X (Twitter)
+                            Legendary South Africa cricket team batter AB De Villiers turned back the clock as he slammed an unbeaten century off just 28 deliveries during the Taste of SuperSport Park exhibition match in Centurion. It was an explosive knock from De Villiers who smashed 15 sixes to cruise to a quickfire century. The legendary cricketer, who was playing for Titans Legends, retired immediately after completing his century. Thanks to his innings, Titans Legends posted a mammoth total of 269 in 20 overs. In reply, Bull Legends were 125 for the loss of 8 wickets in 14 overs before rain interrupted play. The Bulls Legends side was made up of former rugby players who used to Super Rugby side Bulls.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="virat.jpeg" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Virat Kohli becomes the fastest batter to reach 14,000 ODI Runs! 🐐</h5>
+                        <p class="card-text">Star Indian batter Virat Kohli would look to recover from his rough patch following what was a disappointing Border-Gavaskar Trophy for him.
+
+                            Besides a century in Perth, Kohli couldn't weave his magic with the bat.
+                            
+                            The 36-year-old would now feature in the three-match ODI series against England at home ahead of the all-important ICC Champions Trophy.
+                            
+                            Kohli eyes several milestones in the 50-over format.
+                            
+                            </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Login or Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login Form -->
+                    <div class="login-form" id="loginForm">
+                        <h5>Login</h5>
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="javascript:void(0);" id="toSignup">Create one</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Sign Up Form -->
+                    <div class="signup-form" id="signupForm" style="display: none;">
+                        <h5>Create Account</h5>
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="newUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="newUsername" placeholder="Enter a username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="newPassword" placeholder="Create a password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                        </form>
+                        <div class="text-center mt-3">
+                            <p>Already have an account? <a href="javascript:void(0);" id="toLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to toggle between Login and SignUp forms
+        document.getElementById('toSignup').addEventListener('click', function() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'block';
+        });
+
+        document.getElementById('toLogin').addEventListener('click', function() {
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
