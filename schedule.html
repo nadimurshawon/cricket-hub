@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .premium-schedule {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .premium-schedule:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .normal-schedule {
+            background-color: #f1f1f1;
+            color: #333;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .normal-schedule:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-icon {
+            font-size: 1.2rem;
+            color: #FFD700;
+            margin-right: 10px;
+        }
+
+        .schedule-date-time {
+            font-size: 1rem;
+            color: #333;
+        }
+        .navbar {
+            background-color: #0b0c0c;
+        }
+
+        /* Text color white for navbar links */
+        .navbar-nav .nav-link {
+            color: #fff; /* Set navbar links text to white */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff; /* Active link color */
+        }
+
+        /* Make the "CricketHub" brand text white */
+        .navbar-brand {
+            color: #fff; /* Set brand text to white */
+        }
+
+        .country-language {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .schedule-header {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .league-list {
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .league-item {
+            background-color: #e7f5ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .league-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CricketHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="series.html">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ranking.html">Ranking</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Year Match Schedule Section -->
+    <div class="container mt-5">
+        <h3 class="schedule-header">Cricket Match Schedule (2025)</h3>
+
+        <!-- Filter Section (optional for future improvement) -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <select class="form-select" id="countryFilter" aria-label="Select Country">
+                    <option selected>Filter by Country</option>
+                    <option value="India">India</option>
+                    <option value="Australia">Australia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="England">England</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <!-- Add more countries here -->
+                </select>
+            </div>
+            <div class="col-md-6">
+                <input type="date" class="form-control" id="dateFilter" />
+            </div>
+        </div>
+
+        <!-- Match Schedule List -->
+        <div class="list-group">
+            <!-- Premium Schedule Example -->
+            <a href="#" class="list-group-item list-group-item-action premium-schedule">
+                <span class="schedule-icon">🏏</span>
+                India vs Pakistan (T20) 
+                <div class="schedule-date-time">March 15, 2025 | 7:00 PM IST</div>
+                <div class="country-language">Language: Hindi, English</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action premium-schedule">
+                <span class="schedule-icon">🏏</span>
+                Australia vs England (ODI)
+                <div class="schedule-date-time">March 18, 2025 | 2:00 PM AEST</div>
+                <div class="country-language">Language: English</div>
+            </a>
+
+            <!-- Normal Schedule Example -->
+            <a href="#" class="list-group-item list-group-item-action normal-schedule">
+                South Africa vs New Zealand (Test)
+                <div class="schedule-date-time">March 20, 2025 | 10:00 AM SAST</div>
+                <div class="country-language">Language: English</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action normal-schedule">
+                Sri Lanka vs Bangladesh (T20)
+                <div class="schedule-date-time">March 22, 2025 | 6:00 PM SLST</div>
+                <div class="country-language">Language: Sinhala, Tamil</div>
+            </a>
+        </div>
+
+        <!-- Country Leagues Section -->
+        <h3 class="league-list">Country Leagues</h3>
+        <div class="list-group">
+            <div class="league-item">
+                <h5>IPL 2025 (Indian Premier League)</h5>
+                <p>India's most popular T20 league, featuring top international and domestic teams.</p>
+            </div>
+            <div class="league-item">
+                <h5>BBL 2025 (Big Bash League)</h5>
+                <p>Australia's T20 league featuring teams from across the country.</p>
+            </div>
+            <div class="league-item">
+                <h5>PSL 2025 (Pakistan Super League)</h5>
+                <p>Pakistan's premier T20 league, showcasing some of the best T20 talent globally.</p>
+            </div>
+            <!-- Add more leagues as necessary -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

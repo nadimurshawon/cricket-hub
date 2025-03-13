@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC Rankings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .premium-rank {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .normal-rank {
+            background-color: #f1f1f1;
+            color: #333;
+            border-radius: 5px;
+        }
+        .navbar {
+            background-color: #0b0c0c;
+        }
+
+        /* Text color white for navbar links */
+        .navbar-nav .nav-link {
+            color: #fff; /* Set navbar links text to white */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff; /* Active link color */
+        }
+
+        /* Make the "CricketHub" brand text white */
+        .navbar-brand {
+            color: #fff; /* Set brand text to white */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CricketHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.html">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="series.html">Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Team</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ranking Section -->
+    <div class="container mt-5">
+        <h3>ICC Rankings</h3>
+
+        <!-- Tabs for Test, ODI, and T20 Rankings -->
+        <ul class="nav nav-tabs" id="rankingTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="test-tab" data-bs-toggle="tab" href="#test" role="tab" aria-controls="test" aria-selected="true">Test</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="odi-tab" data-bs-toggle="tab" href="#odi" role="tab" aria-controls="odi" aria-selected="false">ODI</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="t20-tab" data-bs-toggle="tab" href="#t20" role="tab" aria-controls="t20" aria-selected="false">T20</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content for Rankings -->
+        <div class="tab-content" id="rankingTabsContent">
+            <!-- Test Rankings -->
+            <div class="tab-pane fade show active" id="test" role="tabpanel" aria-labelledby="test-tab">
+                <h4>Top Test Teams</h4>
+                <ul class="list-group">
+                    <li class="list-group-item premium-rank">1. AUSTRALIA</li>
+                    <li class="list-group-item normal-rank">2. SOUTH AFRICA</li>
+                    <li class="list-group-item normal-rank">3. INDIA</li>
+                    <li class="list-group-item normal-rank">4. England</li>
+                    <li class="list-group-item normal-rank">5. NEW ZEALAND</li>
+                    <li class="list-group-item normal-rank">6. SRI LANKA</li>
+                    <li class="list-group-item normal-rank">7. PAKISTAN</li>
+                    <li class="list-group-item normal-rank">8. WEST INDIES</li>
+                    <li class="list-group-item normal-rank">9. BANGLADESH</li>
+                    <li class="list-group-item normal-rank">10. IRELAND</li>
+                </ul>
+            </div>
+
+            <!-- ODI Rankings -->
+            <div class="tab-pane fade" id="odi" role="tabpanel" aria-labelledby="odi-tab">
+                <h4>Top ODI Teams</h4>
+                <ul class="list-group">
+                    <li class="list-group-item premium-rank">1. India</li>
+                    <li class="list-group-item normal-rank">2. England</li>
+                    <li class="list-group-item normal-rank">3. New Zealand</li>
+                    <li class="list-group-item normal-rank">4. Australia</li>
+                    <li class="list-group-item normal-rank">5. South Africa</li>
+                </ul>
+            </div>
+
+            <!-- T20 Rankings -->
+            <div class="tab-pane fade" id="t20" role="tabpanel" aria-labelledby="t20-tab">
+                <h4>Top T20 Teams</h4>
+                <ul class="list-group">
+                    <li class="list-group-item premium-rank">1. India</li>
+                    <li class="list-group-item normal-rank">2. England</li>
+                    <li class="list-group-item normal-rank">3. Australia</li>
+                    <li class="list-group-item normal-rank">4. New Zealand</li>
+                    <li class="list-group-item normal-rank">5. Pakistan</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
