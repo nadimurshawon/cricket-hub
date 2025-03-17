@@ -10,19 +10,58 @@
             background-color: #0b0c0c;
         }
 
-        /* Text color white for navbar links */
         .navbar-nav .nav-link {
-            color: #fff; /* Set navbar links text to white */
+            color: #fff;
         }
 
         .navbar-nav .nav-link.active {
-            color: #fff; /* Active link color */
+            color: #fff;
         }
 
-        /* Make the "CricketHub" brand text white */
         .navbar-brand {
-            color: #fff; /* Set brand text to white */
+            color: white;
+            font-weight: bold;
         }
+
+        .card {
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        /* Modal styles */
+        .modal-header {
+            background-color: #0b0c0c;
+            color: #fff;
+        }
+
+        .modal-body {
+            background-color: #f8f9fa;
+        }
+
+        .modal-footer {
+            background-color: #f8f9fa;
+        }
+
+        /* Hide the team lists by default */
+        .team-squad {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -51,7 +90,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="series.html">Series</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="ranking.html">Ranking</a>
                     </li>
@@ -62,78 +100,289 @@
 
     <!-- ICC Teams Content Section -->
     <div class="container mt-5">
-        <h3>ICC Cricket Teams</h3>
+        <h3 class="text-center mb-5">ICC Cricket Teams</h3>
         <div class="row">
+            <!-- Team Card 1 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('India')">
                     <div class="card-body">
                         <h5 class="card-title">India</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 2 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('Australia')">
                     <div class="card-body">
                         <h5 class="card-title">Australia</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 3 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('England')">
                     <div class="card-body">
                         <h5 class="card-title">England</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 4 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('South Africa')">
                     <div class="card-body">
                         <h5 class="card-title">South Africa</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 5 -->
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">New Zealand</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('Pakistan')">
                     <div class="card-body">
                         <h5 class="card-title">Pakistan</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 6 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('New Zealand')">
                     <div class="card-body">
-                        <h5 class="card-title">West Indies</h5>
+                        <h5 class="card-title">New Zealand</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 7 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('Sri Lanka')">
                     <div class="card-body">
                         <h5 class="card-title">Sri Lanka</h5>
                     </div>
                 </div>
             </div>
+
+            <!-- Team Card 8 -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4" data-bs-toggle="modal" data-bs-target="#teamModal" onclick="showSquad('Bangladesh')">
                     <div class="card-body">
                         <h5 class="card-title">Bangladesh</h5>
                     </div>
                 </div>
             </div>
-            <!-- Add more teams as needed -->
+
+        </div>
+    </div>
+
+    <!-- Modal for showing team squad -->
+    <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teamModalLabel">Team Squad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Squad List for Teams (hidden by default) -->
+                    <div id="India" class="team-squad">
+                        <ul class="list-group">
+                            <li class="list-group-item">Virat Kohli</li>
+                            <li class="list-group-item">Rohit Sharma</li>
+                            <li class="list-group-item">Shubman Gill</li>
+                            <li class="list-group-item">KL Rahul</li>
+                            <li class="list-group-item">Rishabh Pant</li>
+                            <li class="list-group-item">Hardik Pandya</li>
+                            <li class="list-group-item">Ravindra Jadeja</li>
+                            <li class="list-group-item">Mohammed Shami</li>
+                            <li class="list-group-item">Jasprit Bumrah</li>
+                            <li class="list-group-item">Yuzvendra Chahal</li>
+                            <li class="list-group-item">Ravichandran Ashwin</li>
+                            <li class="list-group-item">Shikhar Dhawan</li>
+                            <li class="list-group-item">Bhuvneshwar Kumar</li>
+                            <li class="list-group-item">Ishant Sharma</li>
+                            <li class="list-group-item">Prithvi Shaw</li>
+                        </ul>
+                    </div>
+
+                    <div id="Australia" class="team-squad">
+                        <ul class="list-group">
+                            <li class="list-group-item">David Warner</li>
+                            <li class="list-group-item">Aaron Finch</li>
+                            <li class="list-group-item">Steve Smith</li>
+                            <li class="list-group-item">Mitchell Starc</li>
+                            <li class="list-group-item">Pat Cummins</li>
+                            <li class="list-group-item">Glenn Maxwell</li>
+                            <li class="list-group-item">Josh Hazlewood</li>
+                            <li class="list-group-item">Nathan Lyon</li>
+                            <li class="list-group-item">Alex Carey</li>
+                            <li class="list-group-item">Marcus Stoinis</li>
+                            <li class="list-group-item">Marnus Labuschagne</li>
+                            <li class="list-group-item">Mitchell Marsh</li>
+                            <li class="list-group-item">Matthew Wade</li>
+                            <li class="list-group-item">Kane Richardson</li>
+                            <li class="list-group-item">Josh Philippe</li>
+                        </ul>
+                    </div>
+
+                    <div id="England" class="team-squad">
+                        <ul class="list-group">
+                            <li class="list-group-item">Joe Root</li>
+                            <li class="list-group-item">Ben Stokes</li>
+                            <li class="list-group-item">Eoin Morgan</li>
+                            <li class="list-group-item">Jos Buttler</li>
+                            <li class="list-group-item">Jonny Bairstow</li>
+                            <li class="list-group-item">Jofra Archer</li>
+                            <li class="list-group-item">Stuart Broad</li>
+                            <li class="list-group-item">Chris Woakes</li>
+                            <li class="list-group-item">James Anderson</li>
+                            <li class="list-group-item">Sam Curran</li>
+                            <li class="list-group-item">Mark Wood</li>
+                            <li class="list-group-item">Moeen Ali</li>
+                            <li class="list-group-item">Tom Curran</li>
+                            <li class="list-group-item">Sam Billings</li>
+                            <li class="list-group-item">Dawid Malan</li>
+                        </ul>
+                    </div>
+
+                    <!-- Add other teams like South Africa, Pakistan, New Zealand, Sri Lanka, Bangladesh here in similar format -->
+                    <div class="modal-body">
+                        <!-- Squad List for Teams (hidden by default) -->
+                        <div id="Bangladesh" class="team-squad">
+                            <ul class="list-group">
+                                <li class="list-group-item">Virat Kohli</li>
+                                <li class="list-group-item">Rohit Sharma</li>
+                                <li class="list-group-item">Shubman Gill</li>
+                                <li class="list-group-item">KL Rahul</li>
+                                <li class="list-group-item">Rishabh Pant</li>
+                                <li class="list-group-item">Hardik Pandya</li>
+                                <li class="list-group-item">Ravindra Jadeja</li>
+                                <li class="list-group-item">Mohammed Shami</li>
+                                <li class="list-group-item">Jasprit Bumrah</li>
+                                <li class="list-group-item">Yuzvendra Chahal</li>
+                                <li class="list-group-item">Ravichandran Ashwin</li>
+                                <li class="list-group-item">Shikhar Dhawan</li>
+                                <li class="list-group-item">Bhuvneshwar Kumar</li>
+                                <li class="list-group-item">Ishant Sharma</li>
+                                <li class="list-group-item">Prithvi Shaw</li>
+                            </ul>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Squad List for Teams (hidden by default) -->
+                            <div id="Sri Lanka" class="team-squad">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Virat Kohli</li>
+                                    <li class="list-group-item">Rohit Sharma</li>
+                                    <li class="list-group-item">Shubman Gill</li>
+                                    <li class="list-group-item">KL Rahul</li>
+                                    <li class="list-group-item">Rishabh Pant</li>
+                                    <li class="list-group-item">Hardik Pandya</li>
+                                    <li class="list-group-item">Ravindra Jadeja</li>
+                                    <li class="list-group-item">Mohammed Shami</li>
+                                    <li class="list-group-item">Jasprit Bumrah</li>
+                                    <li class="list-group-item">Yuzvendra Chahal</li>
+                                    <li class="list-group-item">Ravichandran Ashwin</li>
+                                    <li class="list-group-item">Shikhar Dhawan</li>
+                                    <li class="list-group-item">Bhuvneshwar Kumar</li>
+                                    <li class="list-group-item">Ishant Sharma</li>
+                                    <li class="list-group-item">Prithvi Shaw</li>
+                                </ul>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Squad List for Teams (hidden by default) -->
+                                <div id="South Africa" class="team-squad">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Virat Kohli</li>
+                                        <li class="list-group-item">Rohit Sharma</li>
+                                        <li class="list-group-item">Shubman Gill</li>
+                                        <li class="list-group-item">KL Rahul</li>
+                                        <li class="list-group-item">Rishabh Pant</li>
+                                        <li class="list-group-item">Hardik Pandya</li>
+                                        <li class="list-group-item">Ravindra Jadeja</li>
+                                        <li class="list-group-item">Mohammed Shami</li>
+                                        <li class="list-group-item">Jasprit Bumrah</li>
+                                        <li class="list-group-item">Yuzvendra Chahal</li>
+                                        <li class="list-group-item">Ravichandran Ashwin</li>
+                                        <li class="list-group-item">Shikhar Dhawan</li>
+                                        <li class="list-group-item">Bhuvneshwar Kumar</li>
+                                        <li class="list-group-item">Ishant Sharma</li>
+                                        <li class="list-group-item">Prithvi Shaw</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Squad List for Teams (hidden by default) -->
+                                    <div id="Pakistan" class="team-squad">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Virat Kohli</li>
+                                            <li class="list-group-item">Rohit Sharma</li>
+                                            <li class="list-group-item">Shubman Gill</li>
+                                            <li class="list-group-item">KL Rahul</li>
+                                            <li class="list-group-item">Rishabh Pant</li>
+                                            <li class="list-group-item">Hardik Pandya</li>
+                                            <li class="list-group-item">Ravindra Jadeja</li>
+                                            <li class="list-group-item">Mohammed Shami</li>
+                                            <li class="list-group-item">Jasprit Bumrah</li>
+                                            <li class="list-group-item">Yuzvendra Chahal</li>
+                                            <li class="list-group-item">Ravichandran Ashwin</li>
+                                            <li class="list-group-item">Shikhar Dhawan</li>
+                                            <li class="list-group-item">Bhuvneshwar Kumar</li>
+                                            <li class="list-group-item">Ishant Sharma</li>
+                                            <li class="list-group-item">Prithvi Shaw</li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Squad List for Teams (hidden by default) -->
+                                        <div id="New Zealand" class="team-squad">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">Virat Kohli</li>
+                                                <li class="list-group-item">Rohit Sharma</li>
+                                                <li class="list-group-item">Shubman Gill</li>
+                                                <li class="list-group-item">KL Rahul</li>
+                                                <li class="list-group-item">Rishabh Pant</li>
+                                                <li class="list-group-item">Hardik Pandya</li>
+                                                <li class="list-group-item">Ravindra Jadeja</li>
+                                                <li class="list-group-item">Mohammed Shami</li>
+                                                <li class="list-group-item">Jasprit Bumrah</li>
+                                                <li class="list-group-item">Yuzvendra Chahal</li>
+                                                <li class="list-group-item">Ravichandran Ashwin</li>
+                                                <li class="list-group-item">Shikhar Dhawan</li>
+                                                <li class="list-group-item">Bhuvneshwar Kumar</li>
+                                                <li class="list-group-item">Ishant Sharma</li>
+                                                <li class="list-group-item">Prithvi Shaw</li>
+                                            </ul>
+                                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to show squad in modal
+        function showSquad(team) {
+            // Hide all squads
+            const allSquads = document.querySelectorAll('.team-squad');
+            allSquads.forEach(squad => squad.style.display = 'none');
+            
+            // Show the selected squad
+            const selectedSquad = document.getElementById(team);
+            if (selectedSquad) {
+                selectedSquad.style.display = 'block';
+            }
+            
+            // Update the modal title with the team name
+            document.getElementById('teamModalLabel').textContent = `${team} Squad`;
+        }
+    </script>
 
 </body>
 </html>
