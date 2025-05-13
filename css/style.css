@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #0b0c0c;
+}
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+.navbar-nav .nav-link {
+    color: white;
+}
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+.user-account {
+    color: white;
+}
+.login-form, .signup-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+
+ /* Add subtle hover effect for social icons */
+.social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Enlarges the icon */
+    color: #ffcc00; /* Golden yellow color on hover */
+}
+
+/* Styling for the Company text */
+footer .company-description {
+    font-size: 14px;
+    color: #fff;
+}
+
+footer h5 {
+    font-weight: bold;
+    color: #fff; /* Golden color for headings */
+}
+
+/* Logo and Company text styling */
+footer .container img {
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow around the logo */
+}
+
+footer h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+
+/* Ensure sections are aligned in one line on larger screens */
+@media (min-width: 768px) {
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
+}
+.footer-section .col-md-4 {
+    flex: 1;
+    padding: 10px;
+}
+    }
+
+    /* Adjust text styles for better alignment */
+    .social-icons a {
+        font-size: 40px;
+        color: #ffffff;
+    }
+    .social-icons a:hover {
+        color: #ddd;
+    }
+
+    /* Align the company links properly */
+    .list-unstyled li {
+        margin-bottom: 10px;
+    }
+
+

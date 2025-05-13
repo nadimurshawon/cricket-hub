@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Premium series style */
+        .premium-series {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+        
+        /* Hover effect for premium series */
+        .premium-series:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Normal series style */
+        .normal-series {
+            background-color: #f1f1f1;
+            color: #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .navbar {
+            background-color: #0b0c0c;
+        }
+
+        /* Text color white for navbar links */
+        .navbar-nav .nav-link {
+            color: #fff; /* Set navbar links text to white */
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff; /* Active link color */
+        }
+
+        /* Make the "CricketHub" brand text white */
+        .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-brand {
+            color: #fff; /* Set brand text to white */
+        }
+
+        /* Hover effect for normal series */
+        .normal-series:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Icon styles for premium series */
+        .premium-icon {
+            font-size: 1.2rem;
+            color: #FFD700;
+            margin-right: 8px;
+        }
+
+        /* Add some spacing and icon positioning */
+        .list-group-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Premium Badge Style */
+        .premium-badge {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CricketHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.html">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ranking.html">Ranking</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Series Section -->
+    <div class="container mt-5">
+        <h3>ICC Cricket Series</h3>
+
+        <!-- Series List -->
+        <div class="list-group">
+            <!-- Premium Series -->
+            <a href="#" class="list-group-item list-group-item-action premium-series">
+                <span class="premium-icon">🏆</span>
+                ICC World Test Championship Final 2025
+                <span class="premium-badge"></span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action premium-series">
+                <span class="premium-icon">🏆</span>
+                ICC Men's Cricket World Cup 2025
+                <span class="premium-badge"></span>
+            </a>
+
+            <!-- Normal Series -->
+            <a href="#" class="list-group-item list-group-item-action normal-series">
+                India vs Bangladesh T20 Series
+            </a>
+            <a href="#" class="list-group-item list-group-item-action normal-series">
+                Australia vs South Africa ODI Series
+            </a>
+            <a href="#" class="list-group-item list-group-item-action normal-series">
+                New Zealand vs West Indies Test Series
+            </a>
+            <a href="#" class="list-group-item list-group-item-action normal-series">
+                Pakistan vs Sri Lanka ODI Series
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Hub Careers - Current Openings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        h2 {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .current-openings {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .job-role {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .job-role h3 {
+            margin: 0;
+        }
+        .job-details {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Popup Form Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10% auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content input, .modal-content textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            background-color: #333;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .modal-content button:hover {
+            background-color: #555;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cricket Hub Careers</h1>
+</header>
+
+<section class="current-openings">
+    <h2>Current Openings</h2>
+
+    <!-- Job Role 1: Software Engineer -->
+    <div class="job-role">
+        <h3>Software Engineer</h3>
+        <button onclick="showDetails('software-engineer')">View Details</button>
+    </div>
+    <div id="software-engineer" class="job-details">
+        <h4>Responsibilities:</h4>
+        <ul>
+            <li>Develop and maintain scalable software solutions.</li>
+            <li>Collaborate with cross-functional teams for project success.</li>
+            <li>Troubleshoot and debug complex issues.</li>
+        </ul>
+        <h4>Requirements:</h4>
+        <ul>
+            <li>Bachelor's degree in Computer Science or related field.</li>
+            <li>3+ years of experience in software development.</li>
+            <li>Proficiency in Java, Python, or C++.</li>
+            <li>Strong problem-solving skills.</li>
+        </ul>
+        <button onclick="openModal('Software Engineer')">Apply Now</button>
+    </div>
+
+    <!-- Job Role 2: Backend Engineer -->
+    <div class="job-role">
+        <h3>Backend Engineer</h3>
+        <button onclick="showDetails('backend-engineer')">View Details</button>
+    </div>
+    <div id="backend-engineer" class="job-details">
+        <h4>Responsibilities:</h4>
+        <ul>
+            <li>Design and implement server-side applications.</li>
+            <li>Ensure optimal performance and scalability of backend systems.</li>
+            <li>Work with databases and data storage solutions.</li>
+        </ul>
+        <h4>Requirements:</h4>
+        <ul>
+            <li>Bachelor's degree in Computer Science or related field.</li>
+            <li>2+ years of experience in backend development.</li>
+            <li>Proficiency in Node.js, Python, or Java.</li>
+            <li>Experience with database management systems (MySQL, MongoDB, etc.).</li>
+        </ul>
+        <button onclick="openModal('Backend Engineer')">Apply Now</button>
+    </div>
+
+    <!-- Job Role 3: DevOps Engineer -->
+    <div class="job-role">
+        <h3>DevOps Engineer</h3>
+        <button onclick="showDetails('devops-engineer')">View Details</button>
+    </div>
+    <div id="devops-engineer" class="job-details">
+        <h4>Responsibilities:</h4>
+        <ul>
+            <li>Manage and automate cloud infrastructure.</li>
+            <li>Collaborate with development teams to integrate continuous delivery.</li>
+            <li>Ensure the reliability and availability of the production environment.</li>
+        </ul>
+        <h4>Requirements:</h4>
+        <ul>
+            <li>Bachelor's degree in Computer Science or related field.</li>
+            <li>3+ years of experience in DevOps roles.</li>
+            <li>Experience with AWS, Docker, Kubernetes, and CI/CD pipelines.</li>
+        </ul>
+        <button onclick="openModal('DevOps Engineer')">Apply Now</button>
+    </div>
+
+    <!-- Job Role 4: Data Engineer -->
+    <div class="job-role">
+        <h3>Data Engineer</h3>
+        <button onclick="showDetails('data-engineer')">View Details</button>
+    </div>
+    <div id="data-engineer" class="job-details">
+        <h4>Responsibilities:</h4>
+        <ul>
+            <li>Design and build scalable data pipelines.</li>
+            <li>Ensure data quality, consistency, and reliability.</li>
+            <li>Work with data storage solutions and Big Data technologies.</li>
+        </ul>
+        <h4>Requirements:</h4>
+        <ul>
+            <li>Bachelor's degree in Computer Science or related field.</li>
+            <li>2+ years of experience in data engineering or similar roles.</li>
+            <li>Proficiency in SQL, Python, and Big Data tools (Spark, Hadoop).</li>
+        </ul>
+        <button onclick="openModal('Data Engineer')">Apply Now</button>
+    </div>
+
+    <!-- Add more job roles as needed -->
+</section>
+
+<!-- Apply Now Modal Form -->
+<div id="applyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Apply for <span id="roleTitle">Software Engineer</span></h3>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            
+            <select required>
+                <option value="">Select Your Highest Education</option>
+                <option value="Bachelors">Bachelors</option>
+                <option value="Masters">Masters</option>
+                <option value="PhD">PhD</option>
+            </select>
+            
+            <textarea placeholder="Describe your previous job experience" rows="4" required></textarea>
+            
+            <textarea placeholder="Skills and Technologies you are proficient in" rows="4" required></textarea>
+            
+            <input type="url" placeholder="Portfolio URL (if any)" required>
+            
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Function to toggle job details visibility
+    function showDetails(role) {
+        const detailsSection = document.getElementById(role);
+        if (detailsSection.style.display === "none" || detailsSection.style.display === "") {
+            detailsSection.style.display = "block";
+        } else {
+            detailsSection.style.display = "none";
+        }
+    }
+
+    // Function to open the Apply Now form
+    function openModal(role) {
+        document.getElementById("roleTitle").textContent = role;
+        document.getElementById("applyModal").style.display = "block";
+    }
+
+    // Function to close the Apply Now form
+    function closeModal() {
+        document.getElementById("applyModal").style.display = "none";
+    }
+
+    // Close the modal if the user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("applyModal")) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
